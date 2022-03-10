@@ -1,18 +1,28 @@
+############################################
+### Linux
+###########################################
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias k='kubectl'
-alias d='nerdctl'
 alias faas='faas-cli'
+############################################
+### Kubernetes
+############################################
+alias k='kubectl'
+alias kaf='kubectl apply -f'
+alias kd='kubectl describe'
 alias kdry='k -oyaml --dry-run=client'
 alias kg='kubectl get'
 alias kga='kg all'
 alias kgan='kga -n'
-alias kaf='kubectl apply -f'
 alias kw='k krew'
+alias d='nerdctl'
+############################################
+### Terraform
+############################################
 alias tf='terraform'
 alias tfa='terraform apply'
 alias tfaa='terraform apply --auto-approve'
 alias tfd='terraform destroy'
-alias tfp='terraform plan'
 alias tfi='terraform init'
+alias tfp='terraform plan'
