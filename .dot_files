@@ -4,26 +4,36 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias faas='faas-cli'
+
 ############################################
 ### Kubernetes
 ############################################
+### Basics
 alias k='kubectl'
-alias kaf='kubectl apply -f'
-alias kd='kubectl describe'
-alias kc='kubectl create'
-alias kdry='kubectl -oyaml --dry-run=client'
-alias dry='--dry-run="client" -oyaml'
 alias kg='kubectl get'
 alias kga='kg all'
+alias kgaa='kga -A'
 alias kgan='kga -n'
+alias kd='kubectl describe'
+### Nodes
+alias kgn='kubectl get nodes'
+alias kgno='kubectl get nodes -o wide'
+### Create / Apply
+alias ka='kubectl apply'
+alias kaf='ka -f'
+alias kc='kubectl create'
+alias kcf='kc -f'
+### Export 
+alias kdry='kubectl -oyaml --dry-run=client'
+alias dry='--dry-run="client" -oyaml'
+### Plug Ins
 alias kw='k krew'
 alias kbx='kubie ctx'
 alias kgn='kubectl get nodes'
-alias kgno='kubectl get nodes -o wide'
-alias d='nerdctl'
+### Contexts
 alias KC='cp ~/.kube/config ~/.kube/config.bak && export KUBECONFIG=~/.kube/config:~/$1'
 alias KC2='kubectl config view --flatten > ~/.kube/config'
+
 ############################################
 ### Terraform
 ############################################
@@ -33,3 +43,5 @@ alias tfaa='terraform apply --auto-approve'
 alias tfd='terraform destroy'
 alias tfi='terraform init'
 alias tfp='terraform plan'
+
+alias nd='nerdctl'
