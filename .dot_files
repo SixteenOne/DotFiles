@@ -29,7 +29,6 @@ alias dry='--dry-run="client" -oyaml'
 ### Plug Ins
 alias kw='k krew'
 alias kbx='kubie ctx'
-alias kgn='kubectl get nodes'
 ### Contexts
 alias KC='cp ~/.kube/config ~/.kube/config.bak && export KUBECONFIG=~/.kube/config:~/$1'
 alias KC2='kubectl config view --flatten > ~/.kube/config'
